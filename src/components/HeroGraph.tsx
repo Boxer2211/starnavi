@@ -45,6 +45,8 @@ const HeroGraph: React.FC<HeroGraphProps> = ({ heroId }) => {
 
     useEffect(() => {
         fetchHeroData();
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [heroId]);
 
     if (!hero) return <div>Loading...</div>;
